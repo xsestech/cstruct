@@ -6,6 +6,8 @@ project(cstruct)
 ### Test definitions ###
 ##
 SET(CMAKE_SYSTEM_PROCESSOR arm)
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_C_STANDARD 99)
 configure_file(CMakeLists.txt.in
         googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
@@ -27,6 +29,7 @@ include_directories("${PROJECT_SOURCE_DIR}/include")
 
 file(GLOB sources
         "${PROJECT_SOURCE_DIR}/include/*/*.h"
+        "${PROJECT_SOURCE_DIR}/include/*/*/*.h"
         "${PROJECT_SOURCE_DIR}/src/*.c")
 
 add_library(cstruct ${sources})

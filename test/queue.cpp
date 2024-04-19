@@ -4,12 +4,13 @@
 
 #include "gtest/gtest.h"
 extern "C" {
-#include "queue/queue.h"
+#include "static/queue.h"
 }
 
 TEST(queue, testQueuePush) {
   queue_dbl q;
   queue_dbl_init(&q);
+  (&q)->size = 0;
   queue_dbl_push(&q, 1);
   double x = queue_dbl_pop(&q);
   ASSERT_EQ(x, 1);
