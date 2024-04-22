@@ -23,6 +23,7 @@ bdlist_handle_t bdlist_init();
  * Destroys the list
  * @param bdlist root node of the list
  */
+
 void bdlist_destroy(bdlist_handle_t bdlist);
 
 /**
@@ -56,5 +57,15 @@ double bdlist_pop_front(bdlist_handle_t* bdlist_ptr);
  * @return true if empty
  */
 bool bdlist_is_empty(bdlist_handle_t bdlist);
+/**
+ * Iteratate though list from beggining
+ * @example for(){ {
+ * @param bdlist list
+ * @return pointer to next node
+ */
+bdlist_handle_t bdlist_iter_begin(bdlist_handle_t bdlist);
+bdlist_handle_t bdlist_iter_end(bdlist_handle_t bdlist);
+double bdlist_get_value(bdlist_handle_t bdlist);
+
 
 #endif //BIDIRECTIONAL_LIST_H

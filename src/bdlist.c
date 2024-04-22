@@ -139,3 +139,13 @@ double bdlist_pop_front(bdlist_handle_t *bdlist_ptr) {
 bool bdlist_is_empty(bdlist_handle_t bdlist) {
   return bdlist->data != bdlist->data;
 }
+bdlist_handle_t bdlist_iter_begin(bdlist_handle_t bdlist) {
+  return bdlist->next;
+}
+bdlist_handle_t bdlist_iter_end(bdlist_handle_t bdlist) {
+  return bdlist->prev;
+}
+
+double bdlist_get_value(bdlist_handle_t bdlist) {
+  return bdlist->data;
+}

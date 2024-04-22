@@ -270,7 +270,7 @@ typedef struct vector_metadata_t {
     vector_set_size((vec), vector_size(vec) + 1);    \
   } while (0);
 /**
- * Deletes vector from the end of the vector
+ * Deletes element from the end of the vector
  * @param vec vector
  */
 #define vector_pop_back(vec)                            \
